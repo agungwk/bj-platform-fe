@@ -75,7 +75,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="addIntent.html">
+                    <a href="icons.html">
                         <i class="pe-7s-science"></i>
                         <p>Fullfilment</p>
                     </a>
@@ -91,14 +91,14 @@
                     <button type="submit" class="btn backBtn pull-left" style="margin: 10px 3px;">
                         <i class="pe-7s-angle-left-circle"></i>
                     </button>
-                    <a class="navbar-brand" href="#">Intents</a>
+                    <a class="navbar-brand" href="#">Create New Intents</a>
                 </div>  
 
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right"> 
                         <li>
-                            <button onclick="location.href='addIntent.html';" style="margin: 10px 3px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" >
-                              Create New
+                            <button style="margin: 10px 3px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                              Save
                             </button> 
                         </li>
                         <li>
@@ -117,22 +117,34 @@
             <div class="container-fluid"> 
                  <div class="row">
                     <div class="col-md-12">
-                        <div class="card">
-                            <!-- <div class="header">
-                                <h4 class="title">Daftar List Intents</h4>
-                                <p class="category">Here is a subtitle for this table</p>
-                            </div> -->
+                        <div class="form-group">
+                        <label>User Says</label>
+                        <input type="text" class="form-control" placeholder="add user expression">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Events</label>
+                            <form action="#">
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+                                <input  class="mdl-textfield__input" type="text" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">Add Event</label>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="card"> 
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
-                                    <thead>
-                                        <th style="width: 50px;">
-                                            <label style="margin-bottom: 0px;" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                                                  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-                                                  <span class="mdl-checkbox__label"></span>
-                                                </label>
-                                        </th>
-                                        <th>Intents Name</th>
-                                        <th>Action</th> 
+                                    <thead> 
+                                        <th>Required</th>
+                                        <th>Parameter Name</th>
+                                        <th>Entity</th> 
+                                        <th>Value</th>
+                                        <th>Is List</th> 
                                     </thead>
 
                                     <tbody>
@@ -144,41 +156,103 @@
                                                 </label>
                                             </td>
                                             
-                                            <td>Dakota Rice</td>
-                                            <td>$36,738</td> 
+                                            <td>
+                                                <input placeholder="Enter Name" style="background-color: rgba(255, 255, 255, 0); border: none;">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Enter Entity" style="background-color: rgba(255, 255, 255, 0); border: none;"> 
+                                            </td> 
+                                            <td>
+                                                 <input placeholder="Enter Value" style="background-color: rgba(255, 255, 255, 0); border: none;"> 
+                                            </td> 
+                                            <td>  
+                                                <label style="margin-bottom: 0px;" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2-1">
+                                                  <input type="checkbox" id="checkbox-2-1" class="mdl-checkbox__input">
+                                                  <span class="mdl-checkbox__label"></span>
+                                                </label>
+                                            </td> 
                                         </tr>
 
                                         <div class="tableAct">
                                                 test
-                                        </div>
-
-                                        <tr>
-                                            <td>  
-                                                <label style="margin-bottom: 0px;" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
-                                                  <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input">
-                                                  <span class="mdl-checkbox__label"></span>
-                                                </label>
-                                            </td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td> 
-                                        </tr>
-
-                                        <tr>
-                                            <td>  
-                                                <label style="margin-bottom: 0px;" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
-                                                  <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
-                                                  <span class="mdl-checkbox__label"></span>
-                                                </label>
-                                            </td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td> 
-                                        </tr>
+                                        </div> 
                                           
                                     </tbody>
                                 </table>
 
+                                <a href="" style="margin-left: 15px; font-weight: bold;"> 
+                                    <i style="font-size: 20px; font-weight: 100; vertical-align: sub;" class="pe-7s-plus"></i> Add Parameter
+                                </a>
+
                             </div>
                         </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div>Response</div>
+
+                        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                          <div class="mdl-tabs__tab-bar">
+                            <a href="#starks-panel" class="mdl-tabs__tab is-active">Default</a>
+                            <a href="#lannisters-panel" class="mdl-tabs__tab">Line</a>
+                            <a href="#targaryens-panel" class="mdl-tabs__tab">Telegram</a> 
+
+                            <button style="margin-top: 9px;" id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+                              <i class="pe-7s-plus"></i>
+                            </button>
+
+                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                for="demo-menu-lower-right">
+                              <li class="mdl-menu__item">Action in google</li>
+                              <li class="mdl-menu__item">Facebook Messenger</li>
+                              <li disabled class="mdl-menu__item">Skype</li>
+                              <li class="mdl-menu__item">Whats App</li>
+                            </ul>
+
+                          </div> 
+
+                            <div style="margin-top: 20px;" class="alert alert-info alert-with-icon" data-notify="container">
+                                <!-- <button type="button" aria-hidden="true" class="close">×</button> -->
+                                <span style="left: 30px;position: absolute; top: 30%; margin-top: 5px;" data-notify="icon" class="pe-7s-bell"></span>
+                                <span data-notify="message">If no response is defined in an integration tab, responses below will be used.</span>
+                            </div>
+
+                            <div class="mdl-tabs__panel is-active" id="starks-panel">
+                                <div class="card"> 
+                                    <div style="padding-top: 5px !important;" class="content table-responsive table-full-width">
+                                        <table class="table table-hover table-striped">
+                                            <div class="title" style="margin: 15px;">Text Response  
+                                                <span style="float: right; font-size: 20px;"><i class="pe-7s-trash"></i></span>
+                                            </div>  
+                                            <tbody>
+                                                <tr class="tabAct">  
+                                                    <td style="width: 25px;"> 1. </td>
+                                                    <td style="width: calc(100% - 25px);">
+                                                        <input placeholder="Enter Entity" style="background-color: rgba(255, 255, 255, 0); border: none; width: 100%;"> 
+                                                    </td>   
+                                                </tr> 
+                                                  
+                                            </tbody>
+                                        </table> 
+
+                                    </div>
+                                </div>
+                            </div>
+
+                          <div class="mdl-tabs__panel" id="lannisters-panel">
+                            <ul>
+                              <li>Tywin</li> 
+                            </ul>
+                          </div>
+                          <div class="mdl-tabs__panel" id="targaryens-panel">
+                            <ul>
+                              <li>Viserys</li> 
+                            </ul>
+                          </div>
+                        </div> 
+
+
                     </div>
 
                 </div>
@@ -285,6 +359,6 @@
             });
 
     	});
-	</script> -->
-
+	</script>
+ -->
 </html>
