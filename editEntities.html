@@ -57,7 +57,7 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a href="user.html">
+                    <a href="Entities.html">
                         <i class="pe-7s-user"></i>
                         <p>Entities</p>
                     </a>
@@ -88,22 +88,25 @@
         <nav class="navbar navbar-default navbar-fixed contentHead">
             <div class="container-fluid">
                 <div class="navbar-header"> 
-                    <a class="navbar-brand" href="#">Entities</a>
+                    <button onclick="location.href='Entities.html';" type="submit" class="btn backBtn pull-left" style="margin: 12.5px 3px;">
+                        <i class="pe-7s-angle-left-circle"></i>
+                    </button>
+
+                    <form class="" action="#" style="float: left;">
+                      <div class="mdl-textfield mdl-js-textfield" style="padding: 15px 0;">
+                        <input class="mdl-textfield__input" type="text" id="sample1" style="border: none; padding-bottom: 7px;">
+                        <label class="mdl-textfield__label" for="sample1" style="padding-bottom: 7px;">Questions</label>
+                      </div>
+                    </form>
                 </div>  
 
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right"> 
                         <li>
-                            <button onclick="location.href='addIntent.html';" style="margin: 10px 3px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" >
-                              Create New
+                            <button onclick="location.href='#';" style="margin: 10px 3px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" >
+                              Save
                             </button> 
-                        </li>
-                        <li>
-                           <a href="">
-                                <i class="fa fa-search"></i>
-                                <p class="hidden-lg hidden-md">Search</p>
-                            </a>
-                        </li>
+                        </li> 
                     </ul> 
                 </div>
 
@@ -115,97 +118,85 @@
                  <div class="row">
                     <div class="col-md-12">
                         <div class="col-md-6">
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-                              <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
-                              <span class="mdl-checkbox__label">Define synontyms</span>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                              <input type="checkbox" name="synonym" onchange="valueChanged()" id="checkbox-1" class="mdl-checkbox__input">
+                              <span class="mdl-checkbox__label" style="font-weight: 100;">Define synonyms</span>
                             </label>
                         </div>
 
                         <div class="col-md-6">
                             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
                               <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
-                              <span class="mdl-checkbox__label">Allow automated expansion</span>
+                              <span class="mdl-checkbox__label" style="font-weight: 100;">Allow automated expansion</span>
                             </label>
                         </div>
-                    </div>
+                    </div> 
 
-                    
-
-                    <div class="col-md-12">
+                    <div class="col-md-12 marginT">
                         <div class="card"> 
                             <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead>
-                                        <th style="width: 50px;">
-                                            <label style="margin-bottom: 0px;" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                                                  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-                                                  <span class="mdl-checkbox__label"></span>
-                                                </label>
-                                        </th>
-                                        <th>Entities Name</th> 
-                                    </thead>
-
+                                <table name="synonyms" id="listHide" class="table table-hover table-striped">
                                     <tbody>
-                                        <tr class="tabAct"> 
-                                            <td>  
-                                                <label style="margin-bottom: 0px;" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-                                                  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
-                                                  <span class="mdl-checkbox__label"></span>
-                                                </label>
+                                        <tr>  
+                                            <td><input placeholder="Enter Value" value="Kapan" style="background-color: rgba(255, 255, 255, 0); border: none; width: 100%;"> </td> 
+                                            <td class="tableAct"> 
+                                                <button class="mdl-button mdl-js-button mdl-button--icon"> 
+                                                    <i class="pe-7s-trash"></i> 
+                                                </button>  
                                             </td>
-                                            
-                                            <td>@questions</td> 
+                                        </tr>  
+                                        <tr>  
+                                            <td>
+                                                <input placeholder="Enter Value" style="background-color: rgba(255, 255, 255, 0); border: none; width: 100%;"> 
+                                            </td> 
+                                            <td class="tableAct"> 
+                                                <button class="mdl-button mdl-js-button mdl-button--icon"> 
+                                                    <i class="pe-7s-trash"></i> 
+                                                </button>  
+                                            </td>
                                         </tr> 
-
-                                        <tr class="tabAct">
-                                            <td>  
-                                                <label style="margin-bottom: 0px;" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
-                                                  <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input">
-                                                  <span class="mdl-checkbox__label"></span>
-                                                </label>
-                                            </td>
-                                            <td class="tabAct">@greatings</td>
-                                            <div class="tableAct">Test</div> 
-                                        </tr>
- 
-                                          
                                     </tbody>
                                 </table>
 
+                                <table name="synonyms" id="listShow" class="table table-hover table-striped" style="display: none;">
+                                    <tbody>
+                                        <tr>  
+                                            <td>
+                                                <input placeholder="Enter Value" value="Kapan" style="background-color: rgba(255, 255, 255, 0); border: none; width: 100%;"> 
+                                            </td> 
+                                            <td>
+                                                <input placeholder="Enter Value" value="Kapan, Kpn, Kapn, Kpan" style="background-color: rgba(255, 255, 255, 0); border: none; width: 100%;"> 
+                                            </td> 
+                                            
+                                            <td class="tableAct"> 
+                                                <button class="mdl-button mdl-js-button mdl-button--icon"> 
+                                                    <i class="pe-7s-pen"></i> 
+                                                </button> 
+                                                <button class="mdl-button mdl-js-button mdl-button--icon"> 
+                                                    <i class="pe-7s-trash"></i> 
+                                                </button>  
+                                            </td>
+                                        </tr>
 
+                                        <tr>  
+                                            <td>
+                                                <input placeholder="Enter Reference Value" style="background-color: rgba(255, 255, 255, 0); border: none; width: 100%;"> 
+                                            </td> 
+                                            <td>
+                                                <input placeholder="Enter Synonym" style="background-color: rgba(255, 255, 255, 0); border: none; width: 100%;"> 
+                                            </td> 
+                                            <td class="tableAct"> 
+                                                <button class="mdl-button mdl-js-button mdl-button--icon"> 
+                                                    <i class="pe-7s-trash"></i> 
+                                                </button>  
+                                            </td>
+                                        </tr> 
+                                    </tbody>
+                                </table>
 
-<table>
-    <tr>
-        <td>12</td>
-        <td>asdasd</td>
-        <td><a href="">Close</a></td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>asdasd</td>
-        <td><a href="">Close</a></td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>asdasd</td>
-        <td><a href="">Close</a></td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>asdasd</td>
-        <td><a href="">Close</a> <a href="">Close</a></td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>asdasd</td>
-        <td><a href="">Close</a></td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>asdasd</td>
-        <td><a href="">Close</a></td>
-    </tr>
-</table>
+                                <a href="" style="margin-left: 15px; font-weight: bold;"> 
+                                    <i style="font-size: 20px; font-weight: 100; vertical-align: sub;" class="pe-7s-plus"></i> Add a row
+                                </a>
 
                             </div>
                         </div>
@@ -316,5 +307,20 @@
 
         });
     </script> -->
+
+    <script type="text/javascript">
+        function valueChanged()
+        {
+            if($('#checkbox-1').is(":checked"))   
+                $("#listHide").hide(),
+
+                $("#listShow").show();
+            else
+                $("#listHide").show(),
+
+                $("#listShow").hide();
+        }
+
+    </script>
 
 </html>

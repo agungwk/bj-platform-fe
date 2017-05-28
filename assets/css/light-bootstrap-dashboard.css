@@ -2831,13 +2831,7 @@ body > .navbar-collapse {
 }
 
 
-.tableAct{ 
-    display: none; 
-}
 
-.tabAct:hover .tableAct {
-    display: block;
-}
 
 
 
@@ -3195,16 +3189,52 @@ input.textarea {
 }
 
 
-table a{
-    display: none;
+table .tableAct{
+    display: none; 
 }
-table tr:hover a{
+table tr:hover .tableAct{
+    display: block;
+    position: absolute;
+    right: 15px; 
+    cursor: pointer;
+}
+
+.tableAct button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-size: 23px;
+    padding: 0;
+}
+
+/*.tableAct{ 
+    display: none; 
+}
+
+.tabAct:hover .tableAct {
     display: block;
 }
 
+*/
 
+.marginT{
+  margin-top: 10px;
+}
 
+.marginB{
+  margin-bottom: 10px;
+}
 
+.marginT20{
+  margin-top: 20px;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
 
 
 
