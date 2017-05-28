@@ -85,13 +85,21 @@
     </div>
 
     <div class="main-panel">
-        <nav class="navbar navbar-default navbar-fixed">
+        <nav class="navbar navbar-default navbar-fixed contentHead">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="submit" class="btn backBtn pull-left" style="margin: 10px 3px;">
+                    <button onclick="location.href='dashboard.html';" type="submit" class="btn backBtn pull-left" style="margin: 12.5px 3px;">
                         <i class="pe-7s-angle-left-circle"></i>
                     </button>
-                    <a class="navbar-brand" href="#">Create New Intents</a>
+
+                    <form class="" action="#" style="float: left;">
+                      <div class="mdl-textfield mdl-js-textfield" style="padding: 15px 0;">
+                        <input class="mdl-textfield__input" type="text" id="sample1" style="border: none; padding-bottom: 7px;">
+                        <label class="mdl-textfield__label" for="sample1" style="padding-bottom: 7px;"">Insert Intent Name</label>
+                      </div>
+                    </form>
+
+                    <!-- <a class="navbar-brand" href="#">Create New Intents</a> -->
                 </div>  
 
                 <div class="collapse navbar-collapse">
@@ -126,12 +134,12 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label>Events</label>
-                            <form action="#">
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
-                                <input  class="mdl-textfield__input" type="text" id="sample3">
-                                <label class="mdl-textfield__label" for="sample3">Add Event</label>
+                            <form class="" action="#">
+                              <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+                                <input class="mdl-textfield__input" type="text" id="addEvent">
+                                <label class="mdl-textfield__label" for="addEvent">Add Event</label>
                               </div>
-                            </form>
+                            </form> 
                         </div>
                     </div>
 
@@ -241,14 +249,40 @@
                             </div>
 
                           <div class="mdl-tabs__panel" id="lannisters-panel">
-                            <ul>
-                              <li>Tywin</li> 
-                            </ul>
+                            <div class="card"> 
+                                    <div style="padding-top: 5px !important;" class="content table-responsive table-full-width">
+                                        <table class="table table-hover table-striped">
+                                            <div class="title" style="margin: 15px;">Text Response  
+                                                <span style="float: right; font-size: 20px;"><i class="pe-7s-trash"></i></span>
+                                            </div>  
+                                            <tbody>
+                                                <tr class="tabAct">  
+                                                    <td style="width: 25px;"> 1. </td>
+                                                    <td style="width: calc(100% - 25px);">
+                                                        <input placeholder="Enter Entity" style="background-color: rgba(255, 255, 255, 0); border: none; width: 100%;"> 
+                                                    </td>   
+                                                </tr> 
+                                                  
+                                            </tbody>
+                                        </table> 
+
+                                    </div>
+                                </div>
                           </div>
                           <div class="mdl-tabs__panel" id="targaryens-panel">
-                            <ul>
-                              <li>Viserys</li> 
+                            <button id="addMessage" class="mdl-button mdl-js-button mdl-button--raised">
+                              Add Message Content
+                            </button>
+
+                            <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
+                                for="addMessage">
+                              <li class="mdl-menu__item">Text Response</li>
+                              <li class="mdl-menu__item">Image</li>
+                              <li disabled class="mdl-menu__item">Card</li>
+                              <li class="mdl-menu__item">Quick Replies</li>
+                              <li class="mdl-menu__item">Custom Payload</li>
                             </ul>
+
                           </div>
                         </div> 
 
@@ -275,7 +309,7 @@
 
 
         <div class="menu">
-            <div class="back"><i class="fa fa-chevron-left" style="align-self: center;"></i> <img src="assets/img/bangJoni.png" draggable="false"/></div>
+            <div class="back"><i class="pe-7s-angle-left" style="align-self: center;"></i> <img src="assets/img/bangJoni.png" draggable="false"/></div>
             <div class="name">Bang Joni</div>
             <div class="last">Online</div>
         </div>
@@ -303,7 +337,7 @@
     <li class="other">
         <div class="avatar"><img src="assets/img/bangJoni.png" draggable="false"/></div>
       <div class="msg">
-        <p>Wah apa tu? <emoji class="hearth_blue"/></p>
+        <p>Wah apa tu?</p>
         <time>20:20</time>
       </div>
     </li>

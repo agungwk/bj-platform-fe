@@ -426,7 +426,10 @@ body > .navbar-collapse {
 
   .main-panel > .content {
     padding: 30px 15px;
-    min-height: calc(100% - 123px); }
+    margin-top: 60px;
+    overflow: auto;
+    height: calc(100% - 70px);
+  }
   .main-panel > .footer {
     border-top: 1px solid #e7e7e7; }
   .main-panel .navbar {
@@ -2832,7 +2835,7 @@ body > .navbar-collapse {
     display: none; 
 }
 
-.tabAct:hover + .tableAct {
+.tabAct:hover .tableAct {
     display: block;
 }
 
@@ -3103,7 +3106,7 @@ emoji.funny{background-image: url(https://i.imgur.com/qKia58V.png);}
     height: 12px;
     max-height: 12px;
     background: #e5e5e5;
-    box-shadow: inset 0px 50px 0px rgba(82,179,217,0.9), inset 0px -52px 0px #fafafa;
+    /*box-shadow: inset 0px 50px 0px rgba(82,179,217,0.9), inset 0px -52px 0px #fafafa;*/
 }
 
 ::-webkit-scrollbar-thumb {
@@ -3183,6 +3186,21 @@ input.textarea {
    margin-bottom: 10px !important;
 }
 
+
+.contentHead{
+    position: fixed;
+    width: calc(75% - 260px);
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+table a{
+    display: none;
+}
+table tr:hover a{
+    display: block;
+}
 
 
 
