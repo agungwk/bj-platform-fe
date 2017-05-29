@@ -20,6 +20,12 @@
     <!--  Light Bootstrap Table core CSS    -->
     <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
+    <link rel="stylesheet" href="assets/css/material.css">
+<!--     <link rel="stylesheet" href="assets/materialize/css/materialize.css">  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="assets/js/material.min.js"></script>
+
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -30,11 +36,11 @@
 <body>
 
             <div class="wrapper"> 
-                <div class="collapse navbar-collapse" style="padding: 10px 15%; position: fixed; top: 0; width: 100%;">
+                <div class="collapse navbar-collapse" style="padding: 10px 15%; position: fixed; top: 0; width: 100%;     background-color: #44c1c0;">
                     <ul class="nav navbar-nav navbar-left">
                         <li>
-                            <a href="#"> 
-                                <p style="color: white;">LOGO</p>
+                            <a href="#" style="padding: 5px; margin-right: 20px;"> 
+                                <img class="" src="assets/img/testLogo2.png" alt="..." style="height: 40px;"> 
                             </a>
                         </li>
 
@@ -64,8 +70,8 @@
                     <ul class="nav navbar-nav navbar-right"> 
 
                         <li>
-                            <a href="#">
-                                <p style="color: white;">Log In</p>
+                            <a href="#" data-toggle="modal" data-target="#myModal">
+                                <p style="color: #F8E71C; font-weight: bold;">Log In</p>
                             </a>
                         </li>
                         <li class="separator hidden-lg hidden-md"></li>
@@ -73,12 +79,115 @@
                 </div>
 
 
-                <div class="preBanner" style="padding-top: 70px; background-color: #44C1C0; height: 450px; width: 100%;">   
-                    <div style="float: left;width: 40%;"> <img src=""></div>
-                    <div style="float: left;width: 60%;"> 
-                        <span style="font-family: Montserrat-Bold; font-size: 40px; color: #FFFFFF; letter-spacing: 0; line-height: 56px;text-shadow: 0 2px 4px rgba(0,0,0,0.50);">Easy Conversations
-                        </span>
+                <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login</h4>
+                      </div>
+
+                      <div class="modal-body" style="display: flex;">
+                        <div class="col-md-8" style="margin: 0 auto;">
+                            <div style="margin: 30px 0;"> <img class="" src="assets/img/testLogoColor.png" alt="..." style="height: 40px;"></div>
+                            <div class="form-group">
+                                <label>Username</label>
+                                <form class="" action="#">
+                                  <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+                                    <input class="mdl-textfield__input" type="text" id="addEvent">
+                                    <label class="mdl-textfield__label" for="addEvent">Insert your username</label>
+                                  </div>
+                                </form> 
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label>
+                                <form class="" action="#">
+                                  <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+                                    <input class="mdl-textfield__input" type="text" id="addEvent">
+                                    <label class="mdl-textfield__label" for="addEvent">Insert your password</label>
+                                  </div>
+                                </form> 
+                            </div>
+
+                            <div class="marginT">
+                                <button onclick="location.href='Dashboard.html';" style="margin: 10px 3px; float: right;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                  Login
+                                </button> 
+                            </div>
+
+
+                        </div>
+
+                      </div>
+
+                     <!--  <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div> -->
                     </div>
+
+                  </div>
+                </div>
+
+
+                <div class="preBanner" style="padding-top: 70px; padding-left: 15%; padding-left: 15%; background-color: #44C1C0; height: 450px; width: 100%;">   
+                    <div style="float: left;width: 35%; text-align: center;">
+                        <img class="" src="assets/img/background_pre.png" alt="..." style="height: 340px;">
+                    </div>
+                    
+                    <div style="float: left;width: 65%; padding-top: 35px;"> 
+                        <div style="font-family: Montserrat-Bold; font-size: 40px; color: #FFFFFF; letter-spacing: 0; line-height: 56px;text-shadow: 0 2px 4px rgba(0,0,0,0.50);">Easy Conversations
+                        </div>
+                        <div style="font-family: Montserrat-Bold; font-size: 44px; color: #FFFFFF; letter-spacing: 0; line-height: 56px;text-shadow: 0 2px 4px rgba(0,0,0,0.50);">Platform
+                        </div>
+                        <div style="color: #fff;">Build brand-unique, natural language interactions </br>
+                            for bots, applications, services, and devices.
+                        </div>
+                        <div class="marginT">
+                            <button style="margin: 10px 3px; background-color: #F8E81C; color: #564747;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                              Sign Up For Free
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="featureBox" > 
+                    <div style="display: flex;">
+                        <div class="iconFeat">
+                            <img src="assets/img/contoh1.png"> 
+                            <div>Chat Bot</div>
+                        </div> 
+                        <div class="iconFeat">
+                            <img src="assets/img/contoh2.png">
+                            <div>Wireable</div>
+                        </div> 
+                        <div class="iconFeat">
+                            <img src="assets/img/contoh3.png">
+                            <div>Apps</div>
+                        </div> 
+                        <div class="iconFeat">
+                            <img src="assets/img/contoh4.png">
+                            <div>Smart City</div>
+                        </div> 
+                    </div> 
+                    
+
+                </div>
+
+
+                <div id="our-partners"  class="col-lg-12">
+                    <h2 class="section-title wow fadeInUp">OUR PARTNERS</h2>
+                    <ul>
+                        <li class="wow fadeInUp"><img src="assets/img/tiketcom.png"></li>
+                        <li class="wow fadeInUp"><img src="assets/img/skyscanner.png"></li>
+                        <li class="wow fadeInUp"><img src="assets/img/uber.png"></li>
+                        <li class="wow fadeInUp"><img src="assets/img/xtrans.png"></li>
+                        <li class="wow fadeInUp"><img src="assets/img/zomato.png"></li>
+                    </ul>
                 </div>
 
             </div>

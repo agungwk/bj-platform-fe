@@ -3237,4 +3237,48 @@ table tr:hover .tableAct{
 }
 
 
+.featureBox{
+  background: #FFFFFF;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15);
+    width: 70%;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: 15%; 
+    position: absolute;
+    padding: 25px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#our-partners ul {
+    list-style: none;
+    margin: 0 0 60px 0;
+    padding: 0;
+    text-align: center;
+}
+
+#our-partners ul li {
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin: 3px 0;
+}
+
+
+.featureBox .iconFeat {   
+    margin: 0 auto;
+    float: left;
+    text-align: center;
+
+}
+
+.featureBox .iconFeat img{
+    height: 35px;
+}
 
